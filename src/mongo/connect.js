@@ -1,10 +1,9 @@
 //Import the mongoose module
 var mongoose = require('mongoose');
 
-var {Album} = require('../models/albums/model')
+async function connect() {
 
-
-async function connectAndLoad() {
+    console.log(" Connecting to mongo db app");
     var mongoDB = 'mongodb://lore-app:lore-app-password@127.0.0.1/lore-app-db';
     var db = await mongoose.connect(mongoDB, { useNewUrlParser: true });
 
@@ -13,4 +12,5 @@ async function connectAndLoad() {
 
 }
 
-connectAndLoad();
+module.exports = {connect};
+
