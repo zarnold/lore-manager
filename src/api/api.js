@@ -14,7 +14,7 @@ const LIST_OF_RESSOURCES = [
     },
     {
         name : "albums",
-        router: usersRouter,
+        router: albumsRouter,
     }
 ]
 

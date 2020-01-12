@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-var { Album } = require('../src/models/albums/model')
+var { Album } = require('../models/albums/model')
 
 /* GET users listing. */
 router.get('/', async function (req, res, next) {
