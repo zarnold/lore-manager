@@ -10,5 +10,5 @@ schema.pre('save', function() {
 
 
 
-const Album = mongoose.model('Album', schema);
-module.exports = { Album };
+const Albums = mongoose.model('Albums', schema);
+module.exports = { Albums };
