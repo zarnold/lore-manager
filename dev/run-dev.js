@@ -1,11 +1,9 @@
-require('dotenv').config()
 const util = require('util');
-const exec = util.promisify(require('child_process').exec);
+const exec = require('child_process');
 
-async function launch() {
-  const { stdout, stderr } = await exec('mongod --dbpath G:\\IA\\Data\\db');
-  console.log("lancé")
-}
-
-
-launch();
+var spawn = require('child_process').spawn;
+console.log("Launching mongo")
+spawn('node', ['dev/run-mongo.js'], {
+    stdio: 'ignore',
+    detached: true
+}).unref();
