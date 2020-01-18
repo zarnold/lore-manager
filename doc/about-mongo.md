@@ -1,5 +1,11 @@
 Create a user for your app
 
+You need to launch the mongo server and point to the db file :
+
+```
+   mongod --dbpath G:\IA\Data\db
+```
+
 ```javascript
 use lore-app-db;
 
