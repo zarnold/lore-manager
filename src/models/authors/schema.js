@@ -7,28 +7,21 @@ const schema = new Schema({
     type: String,
     required: [true],
   },
-  : {
+  first_name:{
     type: String,
-    required: [false],
+    required: [false]
   },
-  authorId: {
-    type: ObjectId,
-    ref: 'Author',
+  pseudo: {
+    type: String,
+    required: [false]
   },
-  releaseDate: {
-    type: Date,
+  nationality: {
+    type: String
   },
-  pageCount: {
-      type: Number,      
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now(),
-    required: [true],
-  },
-  createdBy: {
-    type: ObjectId,
+  birthdate:{
+    type: Date
   }
+
 });
 
 module.exports = { schema };
